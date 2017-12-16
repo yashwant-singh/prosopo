@@ -133,15 +133,21 @@
 			<input type="submit" value="Submit">
 		</form>
 		<table class ="container">
+			<tr>
+				<th>Time Stamp</th><th>Pulse</th><th>height</th><th>weight</th><th>Blood Presure Setting</th><th>Blood Pressure Standing</th><th>Temperature</th><th>BMI</th>
+			</tr>
 			<c:forEach var="p" items="${pd}">
-				
-					<th>${p.map.param_label}</th>
-				</c:forEach>
-				<c:forEach var="p" items="${pd}">
-					<%-- <td>${p.map.date_time}</td> --%>
-					<td>${p.map.param_value}</td>
-					
-				</c:forEach>
+				<tr>
+					<td>${p.map.date_time}</td>
+					<td>${p.map.pulse}</td>
+					<td>${p.map.height}</td>
+					<td>${p.map.weight}</td>
+					<td>${p.map.blood_pressure_sitting}</td>
+					<td>${p.map.blood_pressure_standing}</td>
+					<td>${p.map.temprature}</td>
+					<td>${p.map.bmi}</td>
+				</tr>
+			</c:forEach>
 			
 		</table>
 </body>
