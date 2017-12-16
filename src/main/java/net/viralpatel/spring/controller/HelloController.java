@@ -9,7 +9,7 @@ import net.viralpatel.spring.common.DBUtil;
 @Controller
 public class HelloController {
 
-	@GetMapping("/hello")
+	@GetMapping("/")
 	public String hello(Model model) {
 
 		model.addAttribute("name", "John Doe");
