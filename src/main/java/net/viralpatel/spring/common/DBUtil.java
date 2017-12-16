@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 
 public class DBUtil {
 
-	private static String schema = "cen";
+	private static String schema = "str";
 	static {
 		try{
 			Class.forName("org.postgresql.Driver");

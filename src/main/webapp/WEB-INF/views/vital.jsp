@@ -134,18 +134,16 @@
 		</form>
 		<table class ="container">
 			<tr>
-				<th>Time Stamp</th><th>Pulse</th><th>height</th><th>weight</th><th>Blood Presure Setting</th><th>Blood Pressure Standing</th><th>Temperature</th><th>BMI</th>
+				<th>Time Stamp</th><th>Pulse</th><th>weight</th><th>Blood Presure </th><th>Temperature</th><th>Respiration</th>
 			</tr>
 			<c:forEach var="p" items="${pd}">
 				<tr>
 					<td>${p.map.date_time}</td>
 					<td>${p.map.pulse}</td>
-					<td>${p.map.height}</td>
 					<td>${p.map.weight}</td>
-					<td>${p.map.blood_pressure_sitting}</td>
-					<td>${p.map.blood_pressure_standing}</td>
+					<td>${p.map.bp}</td>
 					<td>${p.map.temprature}</td>
-					<td>${p.map.bmi}</td>
+					<td>${p.map.resp}</td>
 				</tr>
 			</c:forEach>
 			
