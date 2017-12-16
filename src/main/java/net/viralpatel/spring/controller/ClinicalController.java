@@ -8,8 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/clinical")
 public class ClinicalController {
 
+	@RequestMapping("vital")
+	public String vital(Model model) {
+		System.out.println("Clinical controller");
+		return "vital";
+	}
+	
 	@RequestMapping("pdsearch")
-	public String patientSearch(Model model) {
+	public String pdSearch(Model model) {
 		System.out.println("Clinical controller");
 		return "vital";
 	}
