@@ -10,7 +10,6 @@ public class ClinicalController {
 
 	@RequestMapping("vital")
 	public String vital(Model model) {
-		System.out.println("Clinical controller");
 		return "vital";
 	}
 	
