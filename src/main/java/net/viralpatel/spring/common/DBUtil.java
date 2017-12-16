@@ -5,9 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.sql.DataSource;
+
 public class DBUtil {
 
-	private static String schema = "str";
+	private static String schema = "cen";
 	static {
 		try{
 			Class.forName("org.postgresql.Driver");
@@ -17,7 +19,7 @@ public class DBUtil {
 	}
 	
 	public static Connection getConnection() {
-		String conUrl = "jdbc:postgresql://localhost:5432/hms?user=postgres&password=";
+		String conUrl = "jdbc:postgresql://ec2-54-179-171-159.ap-southeast-1.compute.amazonaws.com:5432/hms?user=postgres&password=";
 		Connection con = null;
 		try{
 			con = DriverManager.getConnection(conUrl);
@@ -28,5 +30,17 @@ public class DBUtil {
 			System.out.println(ex);
 		}
 		return con;		
+	}
+	
+	
+	/**
+	 * Sets the data source. The data source is injected from the
+	 * spring-servlet.xml file.
+	 *
+	 * @param dataSource
+	 *            the new data source
+	 */
+	public static void setDataSource(DataSource dataSource) {
+		System.out.println(" dataSource :"+ dataSource);
 	}
 }
