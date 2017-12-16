@@ -8,7 +8,7 @@
 <body>
 	Patient Progress Notes POC<br/>
 	
-	<a href="#">Vital Entry</a><br/>
+	<a href="clinical/vital">Vital Entry</a><br/>
 	<a href="#">Progress Notes</a>
 </body>
 </html>
